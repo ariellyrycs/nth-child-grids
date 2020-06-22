@@ -1,0 +1,123 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    height: 50px;
+    background-color: #666;
+}
+
+.nav-container {
+    height: 40px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+}
+
+.nav-container a {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    padding: 3px;
+    line-height: 30px;
+}
+
+.nav-container select {
+    margin-left: 20px;
+    padding: 10px 30px;
+    background-color: #666;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    outline-color: transparent;
+}
+
+main {
+    height: calc(100% - 50px);
+    position: relative;
+}
+
+.container {
+    height: 480px;
+    width: 480px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    font-size: 0;
+    border: 1px solid black;
+}
+
+.container .cell {
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.type-1 .cell, .type-2 .cell {
+    border: 1px solid white;
+}
+
+.type-1 .cell:nth-child(3n - 1) {
+    background-color: #f9b16e;
+}
+
+.type-1 .cell:nth-child(3n - 2) {
+    background-color: #a74a00;
+}
+
+.type-1 .cell:nth-child(3n) {
+    background-color: #f67100;
+}
+
+.type-2 .cell:nth-child(4n) {
+    background-color: #000;
+}
+
+.type-2 .cell:nth-child(4n - 1) {
+    background-color: #444;
+}
+
+.type-2 .cell:nth-child(4n - 2) {
+    background-color: #888;
+}
+
+.type-2 .cell:nth-child(4n - 3) {
+    background-color: #bbb;
+}
+
+/*this could be weight easier if we have row tag but grid but it would conflict*/
+.type-3 .cell:nth-child(n+17):nth-child(-n+32),
+.type-3 .cell:nth-child(n+49):nth-child(-n+64),
+.type-3 .cell:nth-child(n+81):nth-child(-n+96),
+.type-3 .cell:nth-child(n+113):nth-child(-n+128),
+.type-3 .cell:nth-child(n+145):nth-child(-n+160),
+.type-3 .cell:nth-child(n+177):nth-child(-n+192),
+.type-3 .cell:nth-child(n+209):nth-child(-n+224),
+.type-3 .cell:nth-child(n+241):nth-child(-n+256),
+.type-3 .cell:nth-child(even) {
+    background-color: red;
+    opacity: 0.5;
+}
+
+.type-3 .cell:nth-child(n+17):nth-child(-n+32).cell:nth-child(even),
+.type-3 .cell:nth-child(n+49):nth-child(-n+64).cell:nth-child(even),
+.type-3 .cell:nth-child(n+81):nth-child(-n+96).cell:nth-child(even),
+.type-3 .cell:nth-child(n+113):nth-child(-n+128).cell:nth-child(even),
+.type-3 .cell:nth-child(n+145):nth-child(-n+160).cell:nth-child(even),
+.type-3 .cell:nth-child(n+177):nth-child(-n+192).cell:nth-child(even),
+.type-3 .cell:nth-child(n+209):nth-child(-n+224).cell:nth-child(even),
+.type-3 .cell:nth-child(n+241):nth-child(-n+256).cell:nth-child(even) {
+    opacity: 1;
+}
